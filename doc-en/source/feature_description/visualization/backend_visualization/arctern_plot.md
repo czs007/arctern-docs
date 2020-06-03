@@ -246,7 +246,7 @@ arctern.plot.choroplethmap(ax,
 Download an icon image that will be used later to draw icon maps:
 
 ```bash
-wget https://raw.githubusercontent.com/zilliztech/arctern-docs/master/img/icon/arctern-icon-small.png -o /tmp/arctern-logo.png
+wget https://raw.githubusercontent.com/zilliztech/arctern-docs/branch-0.2.x/img/icon/arctern-icon-small.png -o /tmp/arctern-logo.png
 ```
 
 ### Transparent icon map
