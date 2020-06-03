@@ -81,7 +81,7 @@ plt.imshow(mpimg.imread("/tmp/arctern_pointmap.png"))
 
 ### Overlaying a map background with a point map
 
-Use the `plot_pointmap` function of Arctern to draw a point map with a map background based on the taxi trip record data. For each point, its position is defined by the pickup location, its size is 10, its color is # 2DEF4A, and its opacity is 1.
+Use the `plot.pointmap` function of Arctern to draw a point map with a map background based on the taxi trip record data. For each point, its position is defined by the pickup location, its size is 10, its color is # 2DEF4A, and its opacity is 1.
 
 ```python
 fig, ax = plt.subplots(figsize=(10, 6), dpi=200)
@@ -131,7 +131,7 @@ plt.imshow(mpimg.imread("/tmp/arctern_weighted_pointmap.png"))
 
 ### Overlaying a map background with a weighted point map
 
-Use the `plot_weighted_pointmap` function of Arctern to draw a weighted point map with a map background based on the taxi trip record data. For each point, its position is defined by the pickup location, its color varies between # 115f9a ~ # d0f400 according to the taxi trip fare (`df.fare_amount`), its size varies between 5 ~ 30 according to the total taxi fare (` df.total_amount`), its opacity is 1.
+Use the `plot.weighted_pointmap` function of Arctern to draw a weighted point map with a map background based on the taxi trip record data. For each point, its position is defined by the pickup location, its color varies between # 115f9a ~ # d0f400 according to the taxi trip fare (`df.fare_amount`), its size varies between 5 ~ 30 according to the total taxi fare (` df.total_amount`), its opacity is 1.
 
 ```python
 color_bound=[df.fare_amount.min(), df.fare_amount.max()]
@@ -180,7 +180,7 @@ plt.imshow(mpimg.imread("/tmp/arctern_heatmap.png"))
 
 ### Overlaying a map background with a heat map
 
-Use the `plot_heatmap` function of Arctern to draw a heat map with a map background based on the taxi trip record data. The color of each position is decided by the total taxi fare (` df.total_amount`).
+Use the `plot.heatmap` function of Arctern to draw a heat map with a map background based on the taxi trip record data. The color of each position is decided by the total taxi fare (` df.total_amount`).
 
 ```python
 fig, ax = plt.subplots(figsize=(10, 6), dpi=200)
@@ -225,7 +225,7 @@ plt.imshow(mpimg.imread("/tmp/arctern_choroplethmap.png"))
 
 ### Overlaying a map background with a choropleth map
 
-Use the `plot_choroplethmap` function of Arctern to draw a choropleth map with a map background based on the description of two building outlines `p1` and `p2`.
+Use the `plot.choroplethmap` function of Arctern to draw a choropleth map with a map background based on the description of two building outlines `p1` and `p2`.
 
 ```python
 fig, ax = plt.subplots(figsize=(10, 6), dpi=200)
@@ -269,7 +269,7 @@ plt.imshow(mpimg.imread("/tmp/arctern_iconviz.png"))
 
 ### Overlaying a map background with a icon map
 
-Use the `plot_iconviz` function of Arctern to draw an icon map based on the taxi trip record data. The position of each icon is defined by the pickup location.
+Use the `plot.iconviz` function of Arctern to draw an icon map based on the taxi trip record data. The position of each icon is defined by the pickup location.
 
 ```python
 fig, ax = plt.subplots(figsize=(10, 6), dpi=200)
@@ -307,7 +307,7 @@ plt.imshow(mpimg.imread("/tmp/arctern_fishnetmap.png"))
 
 ### Overlaying a map background with a fishnet map
 
-Use the `plot_fishnetmap` function of Arctern to draw a fishnet map based on the taxi trip record data. The position of each icon is defined by the pickup location.
+Use the `plot.fishnetmap` function of Arctern to draw a fishnet map based on the taxi trip record data. The position of each icon is defined by the pickup location.
 
 ```python
 fig, ax = plt.subplots(figsize=(10, 6), dpi=200)

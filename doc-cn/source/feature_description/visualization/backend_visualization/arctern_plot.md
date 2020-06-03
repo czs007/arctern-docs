@@ -81,7 +81,7 @@ plt.imshow(mpimg.imread("/tmp/arctern_pointmap.png"))
 
 ### 点图叠加地图背景
 
-使用 Arctern 的 `plot_pointmap` 方法根据出租车运营数据绘制带地图背景的点图。其中，点的位置为上车地点、点的大小为 10、颜色为 #2DEF4A、不透明度为 1。
+使用 Arctern 的 `plot.pointmap` 方法根据出租车运营数据绘制带地图背景的点图。其中，点的位置为上车地点、点的大小为 10、颜色为 #2DEF4A、不透明度为 1。
 
 ```python
 fig, ax = plt.subplots(figsize=(10, 6), dpi=200)
@@ -131,7 +131,7 @@ plt.imshow(mpimg.imread("/tmp/arctern_weighted_pointmap.png"))
 
 ### 带权点图叠加地图背景
 
-使用 Arctern 的 `plot_weighted_pointmap` 方法根据出租车运营数据绘制带地图背景的带权点图。其中，点的位置为上车地点，点的颜色根据出租车的行程费用（`df.fare_amount`）在 #115f9a ～ #d0f400 之间变化，点的大小根据出租车的总费用（`df.total_amount`）在 5 ～ 30 之间变化，点的不透明度为 1。
+使用 Arctern 的 `plot.weighted_pointmap` 方法根据出租车运营数据绘制带地图背景的带权点图。其中，点的位置为上车地点，点的颜色根据出租车的行程费用（`df.fare_amount`）在 #115f9a ～ #d0f400 之间变化，点的大小根据出租车的总费用（`df.total_amount`）在 5 ～ 30 之间变化，点的不透明度为 1。
 
 ```python
 color_bound=[df.fare_amount.min(), df.fare_amount.max()]
@@ -180,7 +180,7 @@ plt.imshow(mpimg.imread("/tmp/arctern_heatmap.png"))
 
 ### 热力图叠加地图背景
 
-使用 Arctern 的 `plot_heatmap` 方法根据出租车运营数据绘制带地图背景的热力图。其中，每个位置的颜色由出租车的总费用（`df.total_amount`）决定。
+使用 Arctern 的 `plot.heatmap` 方法根据出租车运营数据绘制带地图背景的热力图。其中，每个位置的颜色由出租车的总费用（`df.total_amount`）决定。
 
 ```python
 fig, ax = plt.subplots(figsize=(10, 6), dpi=200)
@@ -225,7 +225,7 @@ plt.imshow(mpimg.imread("/tmp/arctern_choroplethmap.png"))
 
 ### 轮廓图叠加地图背景
 
-使用 Arctern 的 `plot_choroplethmap` 方法根据两个建筑物的轮廓描述（`p1`、`p2`）绘制带地图背景的轮廓图。
+使用 Arctern 的 `plot.choroplethmap` 方法根据两个建筑物的轮廓描述（`p1`、`p2`）绘制带地图背景的轮廓图。
 
 ```python
 fig, ax = plt.subplots(figsize=(10, 6), dpi=200)
@@ -269,7 +269,7 @@ plt.imshow(mpimg.imread("/tmp/arctern_iconviz.png"))
 
 ### 图标图叠加地图背景
 
-使用 Arctern 的 `plot_iconviz` 方法根据出租车运营数绘制带地图背景的图标图。其中，图标的位置为上车地点。
+使用 Arctern 的 `plot.iconviz` 方法根据出租车运营数绘制带地图背景的图标图。其中，图标的位置为上车地点。
 
 ```python
 fig, ax = plt.subplots(figsize=(10, 6), dpi=200)
@@ -307,7 +307,7 @@ plt.imshow(mpimg.imread("/tmp/arctern_fishnetmap.png"))
 
 ### 渔网图叠加地图背景
 
-使用 Arctern 的 `plot_fishnetmap` 方法根据出租车运营数绘制渔网图。其中，网点的位置为上车地点。
+使用 Arctern 的 `plot.fishnetmap` 方法根据出租车运营数绘制渔网图。其中，网点的位置为上车地点。
 
 ```python
 fig, ax = plt.subplots(figsize=(10, 6), dpi=200)
