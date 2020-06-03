@@ -85,7 +85,7 @@ plt.imshow(mpimg.imread("/tmp/arctern_pointmap.png"))
 
 ```python
 fig, ax = plt.subplots(figsize=(10, 6), dpi=200)
-arctern.plot_pointmap(ax, 
+arctern.plot.pointmap(ax, 
                       arctern.ST_Point(df.pickup_longitude,df.pickup_latitude),
                       bbox,
                       point_size=10,
@@ -143,7 +143,7 @@ size_weights = [(v-total_min)/(total_max-total_min)*(size_bound[1]-size_bound[0]
 size_weights = pd.Series(size_weights)
 
 fig, ax = plt.subplots(figsize=(10, 6), dpi=200)
-arctern.plot_weighted_pointmap(ax, 
+arctern.plot.weighted_pointmap(ax, 
                        arctern.ST_Point(df.pickup_longitude,df.pickup_latitude), 
                        color_weights=df.fare_amount,
                        size_weights=size_weights,
@@ -184,7 +184,7 @@ plt.imshow(mpimg.imread("/tmp/arctern_heatmap.png"))
 
 ```python
 fig, ax = plt.subplots(figsize=(10, 6), dpi=200)
-arctern.plot_heatmap(ax, 
+arctern.plot.heatmap(ax, 
                      arctern.ST_Point(df.pickup_longitude,df.pickup_latitude), 
                      weights=df.fare_amount, 
                      bounding_box=bbox, 
@@ -229,7 +229,7 @@ plt.imshow(mpimg.imread("/tmp/arctern_choroplethmap.png"))
 
 ```python
 fig, ax = plt.subplots(figsize=(10, 6), dpi=200)
-arctern.plot_choroplethmap(ax, 
+arctern.plot.choroplethmap(ax, 
                            arctern.ST_GeomFromText(pd.Series([p1,p2])),
                            weights=pd.Series([5,30]),
                            bounding_box=bbox, 
@@ -273,7 +273,7 @@ plt.imshow(mpimg.imread("/tmp/arctern_iconviz.png"))
 
 ```python
 fig, ax = plt.subplots(figsize=(10, 6), dpi=200)
-arctern.plot_iconviz(ax, 
+arctern.plot.iconviz(ax, 
                      arctern.ST_Point(df.pickup_longitude,df.pickup_latitude),  
                      icon_path="/tmp/arctern-logo.png", 
                      bounding_box=bbox,
@@ -311,7 +311,7 @@ plt.imshow(mpimg.imread("/tmp/arctern_fishnetmap.png"))
 
 ```python
 fig, ax = plt.subplots(figsize=(10, 6), dpi=200)
-arctern.plot_fishnetmap(ax, 
+arctern.plot.fishnetmap(ax, 
                         arctern.ST_Point(df.pickup_longitude,df.pickup_latitude), 
                         weights=df.fare_amount, 
                         bounding_box=bbox, 
