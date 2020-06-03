@@ -246,7 +246,7 @@ arctern.plot.choroplethmap(ax,
 执行以下命令下载图标，你将用此图标绘制图标图。
 
 ```bash
-wget https://raw.githubusercontent.com/zilliztech/arctern-docs/master/img/icon/arctern-icon-small.png -o /tmp/arctern-logo.png
+wget https://raw.githubusercontent.com/zilliztech/arctern-docs/branch-0.2.x/img/icon/arctern-icon-small.png -o /tmp/arctern-logo.png
 ```
 
 ### 透明图标图
