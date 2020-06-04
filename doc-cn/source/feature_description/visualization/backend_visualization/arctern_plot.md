@@ -64,7 +64,7 @@ import matplotlib.image as mpimg
 ```python
 fig, ax = plt.subplots(figsize=(10, 6), dpi=200)
 arctern.plot.pointmap(ax, 
-                      arctern.ST_Point(df.pickup_longitude,df.pickup_latitude),
+                      arctern.GeoSeries.point(df.pickup_longitude,df.pickup_latitude),
                       bbox,
                       point_size=10,
                       point_color="#2DEF4A",
@@ -89,7 +89,7 @@ size_weights = pd.Series(size_weights)
 
 fig, ax = plt.subplots(figsize=(10, 6), dpi=200)
 arctern.plot.weighted_pointmap(ax, 
-                       arctern.ST_Point(df.pickup_longitude,df.pickup_latitude), 
+                       arctern.GeoSeries.point(df.pickup_longitude,df.pickup_latitude),
                        color_weights=df.fare_amount,
                        size_weights=size_weights,
                        bounding_box=bbox, 
@@ -109,7 +109,7 @@ arctern.plot.weighted_pointmap(ax,
 ```python
 fig, ax = plt.subplots(figsize=(10, 6), dpi=200)
 arctern.plot.heatmap(ax, 
-                     arctern.ST_Point(df.pickup_longitude,df.pickup_latitude), 
+                     arctern.GeoSeries.point(df.pickup_longitude,df.pickup_latitude),
                      weights=df.fare_amount, 
                      bounding_box=bbox, 
                      coordinate_system="EPSG:4326")
@@ -131,7 +131,7 @@ p2="POLYGON ((-73.9542329907899 40.7787670145087,-73.9545101860555 40.7783876598
 ```python
 fig, ax = plt.subplots(figsize=(10, 6), dpi=200)
 arctern.plot.choroplethmap(ax, 
-                           arctern.ST_GeomFromText(pd.Series([p1,p2])),
+                           arctern.GeoSeries([p1,p2]),
                            weights=pd.Series([5,30]),
                            bounding_box=bbox, 
                            color_gradient=["#115f9a", "#d0f400"], 
@@ -155,7 +155,7 @@ wget https://raw.githubusercontent.com/zilliztech/arctern-docs/branch-0.2.x/img/
 ```python
 fig, ax = plt.subplots(figsize=(10, 6), dpi=200)
 arctern.plot.iconviz(ax, 
-                     arctern.ST_Point(df.pickup_longitude,df.pickup_latitude),  
+                     arctern.GeoSeries.point(df.pickup_longitude,df.pickup_latitude),
                      icon_path="/tmp/arctern-logo.png", 
                      bounding_box=bbox,
                      coordinate_system="EPSG:4326")
@@ -170,7 +170,7 @@ arctern.plot.iconviz(ax,
 ```python
 fig, ax = plt.subplots(figsize=(10, 6), dpi=200)
 arctern.plot.fishnetmap(ax, 
-                        arctern.ST_Point(df.pickup_longitude,df.pickup_latitude), 
+                        arctern.GeoSeries.point(df.pickup_longitude,df.pickup_latitude),
                         weights=df.fare_amount, 
                         bounding_box=bbox, 
                         cell_size=8, 
