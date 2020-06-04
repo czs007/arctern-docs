@@ -64,7 +64,7 @@ Use the `plot.pointmap` function of Arctern to draw a point map with a map backg
 ```python
 fig, ax = plt.subplots(figsize=(10, 6), dpi=200)
 arctern.plot.pointmap(ax, 
-                      arctern.ST_Point(df.pickup_longitude,df.pickup_latitude),
+                      arctern.GeoSeries.point(df.pickup_longitude,df.pickup_latitude),
                       bbox,
                       point_size=10,
                       point_color="#2DEF4A",
@@ -89,7 +89,7 @@ size_weights = pd.Series(size_weights)
 
 fig, ax = plt.subplots(figsize=(10, 6), dpi=200)
 arctern.plot.weighted_pointmap(ax, 
-                       arctern.ST_Point(df.pickup_longitude,df.pickup_latitude), 
+                       arctern.GeoSeries.point(df.pickup_longitude,df.pickup_latitude),
                        color_weights=df.fare_amount,
                        size_weights=size_weights,
                        bounding_box=bbox, 
@@ -109,7 +109,7 @@ Use the `plot.heatmap` function of Arctern to draw a heat map with a map backgro
 ```python
 fig, ax = plt.subplots(figsize=(10, 6), dpi=200)
 arctern.plot.heatmap(ax, 
-                     arctern.ST_Point(df.pickup_longitude,df.pickup_latitude), 
+                     arctern.GeoSeries.point(df.pickup_longitude,df.pickup_latitude),
                      df.fare_amount, 
                      bbox, 
                      coordinate_system="EPSG:4326")
@@ -131,7 +131,7 @@ Use the `plot.choroplethmap` function of Arctern to draw a choropleth map with a
 ```python
 fig, ax = plt.subplots(figsize=(10, 6), dpi=200)
 arctern.plot.choroplethmap(ax, 
-                           arctern.ST_GeomFromText(pd.Series([p1,p2])),
+                           arctern.GeoSeries([p1,p2]),
                            pd.Series([50,50]),
                            bbox, 
                            color_gradient=["#115f9a", "#d0f400"], 
@@ -155,7 +155,7 @@ Use the `plot.iconviz` function of Arctern to draw an icon map based on the taxi
 ```python
 fig, ax = plt.subplots(figsize=(10, 6), dpi=200)
 arctern.plot.iconviz(ax, 
-                     arctern.ST_Point(df.pickup_longitude,df.pickup_latitude),  
+                     arctern.GeoSeries.point(df.pickup_longitude,df.pickup_latitude),
                      icon_path="/tmp/arctern-logo.png", 
                      bounding_box=bbox,
                      coordinate_system="EPSG:4326")
@@ -170,7 +170,7 @@ Use the `plot.fishnetmap` function of Arctern to draw a fishnet map based on the
 ```python
 fig, ax = plt.subplots(figsize=(10, 6), dpi=200)
 arctern.plot.fishnetmap(ax, 
-                        arctern.ST_Point(df.pickup_longitude,df.pickup_latitude), 
+                        arctern.GeoSeries.point(df.pickup_longitude,df.pickup_latitude),
                         df.fare_amount, 
                         bbox, 
                         cell_size=8, 
