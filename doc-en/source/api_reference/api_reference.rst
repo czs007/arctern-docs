@@ -8,6 +8,5 @@ API Reference
 
    standalone_api/geoseries
    standalone_api/geodataframe
-   cluster_api/cluster_api
-   map_match/map_match
+   top_level_functions/top_level_functions
    plot/plot
