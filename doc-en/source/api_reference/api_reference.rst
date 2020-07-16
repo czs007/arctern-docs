@@ -7,6 +7,7 @@ API Reference
    :maxdepth: 1
 
    standalone_api/geoseries
+   standalone_api/geodataframe
    cluster_api/cluster_api
    map_match/map_match
    plot/plot
