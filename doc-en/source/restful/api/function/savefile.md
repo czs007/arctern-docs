@@ -1,8 +1,8 @@
-# 保存文件
+# Save File
 
-执行数据查询操作并将结果存入指定文件。仅当数据处理后台为 PySpark 时可用。当数据处理后台为 Python 时请使用 `command` 接口保存文件。参见 [代码执行接口说明](command.md)。
+Executes data queries and saves the results to specified files. Only applicable to the PySpark backend. In case of the Python backend, use the `command` interface to save the files. See [interface description for code execution](command.md).
 
-## 请求说明
+## Request description
 
 - Method: `POST`
 - URL: `/savefile`
@@ -26,25 +26,25 @@
     }
     ```
 
-    参数说明：
+    Parameter description:
 
-    - `tables`: 将数据保存为文件时的描述信息。该字段为一个列表，系统将会按照列表中的顺序依次进行文件保存操作。
-        - `sql`: 待执行的 SQL 查询语句，该语句的结果将作为要保存的表。
-        - `format`: 待保存的文件格式。
-        - `path`: 文件路径。
-        - `options`: 保存文件时的指定选项，使用 `key-value` 形式提供。
+    - `tables`: Descriptions when saving data as a file. This field is a list, and the system will save the files in the order indicated by the list.
+        - `sql`: The SQL query statement to execute, the result of which is the table to save.
+        - `format`: Format of the file to save.
+        - `path`: Path to the file.
+        - `options`: Options when saving the file, provided as `key-value`.
 
-## 请求示例
+## Request example
 
 ### Python
 
-本文示例代码使用 Python 的 `requests` 库调用 `Arctern RESTful API`，执行以下命令安装 `requests`：
+Examples in this article use Python's `requests` library. Run the following command to install `requests`:
 
 ```bash
 pip install requests
 ```
 
-调用示例：
+Sample code:
 
 ```python
 import requests
@@ -94,7 +94,7 @@ curl --location --request POST 'http://localhost:8080/savefile' \
 }'
 ```
 
-## 响应示例
+## Response example
 
 ```json
 {
